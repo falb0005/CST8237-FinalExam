@@ -25,10 +25,15 @@ protected:
   void Reset();
   void CalculateCameraViewpoint(Camera *camera);
 
+  int CheckPlayerBounds();
+  int CheckFruitCollisions();
+
   Player *_player;
   Fruit *_fruit;
   int currentScore;
 
-
   Camera *_gameCamera;
+
+  char* _titleString;
+  int _playerScore;
 };

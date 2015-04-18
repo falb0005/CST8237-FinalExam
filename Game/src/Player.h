@@ -22,6 +22,8 @@ public:
   */
   void AddBodyPiece(Graphics *graphics);
 
+  Vector3 Player::GetHeadPosition();
+
   /**
   * Sets the direction of the head of our player. The player will only move in that direction after 
   * moving at least 1 unit in the current direction.

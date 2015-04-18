@@ -169,3 +169,7 @@ void Player::Draw(Graphics *graphics, Matrix4x4 relativeTo, float dt)
     _body[bodyIndex]->Draw(graphics, relativeTo, dt);
   }
 }
+
+Vector3 Player::GetHeadPosition(){
+	return _body[0]->GetTransform().position;	
+}
