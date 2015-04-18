@@ -43,7 +43,6 @@ SDL_Texture *_texture;
 
 void Game::InitializeImpl()
 {
-	srand(33454545464565);
 	_playerScore = 0;
 	_titleString = (char*)malloc(sizeof(char)* 100);
 
@@ -129,14 +128,6 @@ void Game::UpdateImpl(float dt)
 	{
 		_player->AddBodyPiece(_graphicsObject);
 		_playerScore += 5;
-
-		//spawn new fruit
-		static float newPosX = 0;
-		static float newPosY = 0;
-		newPosX = (rand() % 18) - 9;
-		newPosY = (rand() % 18) - 9;
-		_fruit->GetTransform().position.x = newPosX;
-		_fruit->GetTransform().position.y = newPosY;
 	}
 
 	//update window title
